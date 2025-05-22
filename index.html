@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melker">
+    <meta name="description" content="A Dart Counter">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+<link rel="stylesheet" href="index.css">
+    <title>Dart Counter</title>
+</head> 
+<body class="bg-dark text-white">
+    <body class="bg-dark text-white">
+        <header class="bg-body-primary d-flex position-relative border-bottom border-danger pb-3 shadow-lg">
+            
+            <img src="/Bilder/logotypdart.png" alt="logotyp" class="img-fluid position-absolute start-0 top-0 ms-3 hide-on-mobile" style="width:100px; height:100px;">
+            
+            <nav class="navbar w-100 justify-content-center mt-4">
+                <form class="d-flex">
+                    <a href="index.html" class="btn btn-outline-danger mx-3 text-white" role="button">PLAY</a>
+                    <a href="challenges.html" class="btn btn-outline-danger mx-3 text-white" role="button">CHALLENGES</a>
+                    <a href="aboutus.html" class="btn btn-outline-danger mx-3 text-white" role="button">ABOUT</a>
+                </form>
+            </nav>
+        </header>
+
+    <div class="text-white text-center">
+        <h1 class="display-4">DART COUNTER</h1>
+    </div>
+
+    <img src="Bilder/dartboard.png" alt="dartboard" class="img-fluid mx-auto d-block mt-3d p-0" style="width: 25%; height: 25%;">
+
+    <!-- Singleplayer UI -->
+    <div class="text-center mb-3 d-none" id="singleplayerUI">
+        <h5>Score Required: <em id="scoreRequired">501</em></h5>
+        <h5>3 Dart Average: <em id="dartAverage">0</em></h5>
+        <label for="score">Score (0-180):</label>
+        <input type="number" id="score" name="score" min="0" max="180" />
+        <button id="addScoreBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Add Score</button>
+    </div>
+
+    <!-- Local 1v1 UI -->
+    <div class="container mb-3 d-none" id="local1v1UI">
+        <div class="row">
+            <div class="col-md-6 text-center border-end border-danger">
+                <h5>Player 1 | Score Required: <em id="p1scoreRequired">501</em></h5>
+                <h5>Player 1 | 3 Dart Average: <em id="p1dartAverage">0</em></h5>
+                <label for="p1score">Player 1 Score (0-180):</label>
+                <input type="number" id="p1score" name="p1score" min="0" max="180" />
+                <button id="p1addScoreBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Add Score</button>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <h5>Player 2 | Score Required: <em id="p2scoreRequired">501</em></h5>
+                <h5>Player 2 | 3 Dart Average: <em id="p2dartAverage">0</em></h5>
+                <label for="p2score">Player 2 Score (0-180):</label>
+                <input type="number" id="p2score" name="p2score" min="0" max="180" />
+                <button id="p2addScoreBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Add Score</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropup-center dropup position-fixed bottom-0 start-0 mb-2 ms-2">
+        <button class="btn btn-dark dropdown-toggle border-danger p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            GAMEMODES
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white border border-danger shadow-lg">
+            <li><a class="dropdown-item" href="#" onclick="switchMode('singleplayer')">SINGLEPLAYER</a></li>
+            <li><a class="dropdown-item" href="#" onclick="switchMode('local1v1')">LOCAL 1V1</a></li>
+        </ul>
+    </div>
+
+
+    
+    <div id="180celebration" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 z-3 d-flex flex-column justify-content-center align-items-center text-warning text-center">
+        <h1 class="display-1 fw-bold text-danger text-shadow">180!</h1>
+        <div class="fs-1">🎉 🎯 🎉 🎯 🎉 🎯 </div>
+    </div>
+
+    <div id="170celebration" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 z-3 d-flex flex-column justify-content-center align-items-center text-center text-primary">
+        <img src="Bilder/bigfish.gif" alt="firandebild" class="img-fluid mw-100" style="max-height: 40vh;">
+        <h3 class="display-4 display-md-3 display-lg-2 fw-bold mt-2">170!</h3>
+        <div class="fs-3 fs-md-2 fs-lg-1">🎣The Big Fish🎣</div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

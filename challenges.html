@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melker">
+    <meta name="description" content="A Dart Counter">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+    <title>Dart Counter</title>
+</head>
+<body class="bg-dark text-white">
+    <header class="bg-body-primary d-flex position-relative border-bottom border-danger pb-3 shadow-lg">
+            
+        <img src="/Bilder/logotypdart.png" alt="logotyp" class="img-fluid position-absolute start-0 top-0 ms-3 hide-on-mobile" style="width:100px; height:100px;">
+        
+        <nav class="navbar w-100 justify-content-center mt-4">
+            <form class="d-flex">
+                <a href="index.html" class="btn btn-outline-danger mx-3 text-white" role="button">PLAY</a>
+                <a href="challenges.html" class="btn btn-outline-danger mx-3 text-white" role="button">CHALLENGES</a>
+                <a href="aboutus.html" class="btn btn-outline-danger mx-3 text-white" role="button">ABOUT</a>
+            </form>
+        </nav>
+    </header>
+
+    <div class="text-white text-center">
+        <h1 class="display-4">DART COUNTER</h1>
+    </div>
+
+    <img src="Bilder/dartboard.png" alt="dartboard" class="img-fluid mx-auto d-block p-0" style="width: 25%; height: 25%;">
+
+    <div class="text-center mb-3 d-none" id="singlesUI">
+        <h5>Hit the following singles: </h5>
+        <h5><em id="singlesRequired"></em></h5>
+        <button id="singleBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Try Again</button>
+    </div>
+
+    <div class="text-center mb-3 d-none" id="doublesUI">
+        <h5>Hit the following doubles: </h5>
+        <h5><em id="doublesRequired"></em></h5>
+        <button id="doubleBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Try Again</button>
+    </div>
+
+    <div class="text-center mb-3 d-none" id="checkoutsUI">
+        <h5>Hit the following checkout: </h5>
+        <h5><em id="checkoutRequired"></em></h5>
+        <button id="checkoutBtn" class="btn btn-outline-danger mx-3 text-white" type="button">Try Again</button>
+    </div>
+
+    <div class="text-center mt-3 d-none" id="bullseyeUI">
+        <h5>Hit the <em>bullseye</em> as many times as you can!</h5>
+    </div>
+
+
+
+    <div class="dropup-center dropup position-fixed bottom-0 start-0 mb-2 ms-2">
+        <button class="btn btn-dark dropdown-toggle border-danger p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PRACTICE MODE
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white border border-danger shadow-lg">
+            <li><a class="dropdown-item" href="#" onclick="switchMode('singles')">SINGLES</a></li>
+            <li><a class="dropdown-item" href="#" onclick="switchMode('doubles')">DOUBLES</a></li>
+            <li><a class="dropdown-item" href="#" onclick="switchMode('checkouts')">CHECKOUTS</a></li>
+            <li><a class="dropdown-item" href="#" onclick="switchMode('bullseye')">BULLSEYE</a></li>
+        </ul>
+    </div>
+
+    <script src="challenges.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+</body>

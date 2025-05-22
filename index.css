@@ -1,0 +1,9 @@
+body{
+    background-color: #101b24;
+}
+@media (max-width: 600px){
+    .hide-on-mobile
+    {
+        display: none;
+    }
+}
